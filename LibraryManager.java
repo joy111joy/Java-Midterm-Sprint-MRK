@@ -173,4 +173,15 @@ public class LibraryManager {
         }
         return searchResults;
     }
+        //Search for items by ISBN
+        public ArrayList<LibraryItem> searchItemsByISBN(String ISBN) {
+            ArrayList<LibraryItem> searchResults = new ArrayList<>();
+            for (LibraryItem item : itemsList) {
+                if (item.getISBN().toLowerCase().contains(ISBN.toLowerCase())) {
+                    searchResults.add(item);
+                }
+            }
+            return searchResults;
+        }
 }
+
