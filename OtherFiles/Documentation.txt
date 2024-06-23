@@ -31,7 +31,9 @@ to exit the menu system.
 
 
 
-DEVELOPMENT DOCUMENTION:
+DEVELOPMENT/DEPLOYMENT DOCUMENTION:
+
+To get the source code for this project to this github repository: https://github.com/joy111joy/Java-Midterm-Sprint-MRK
 
 To run the code you need to ensure that java is installed to your system.
 As well, make sure the file directory looks as the following:
@@ -63,12 +65,45 @@ NOTE: The TestMyLibrary.java file is only a test file and can be ignore if desir
 TESTING THE PROJECT:
 To test if the files are correctly installed and are working, run the TestMyLibrary.java file. If everything is correct the output should look like the following:
 
+Search by Title: [Book: Printed LibraryItem[ID=1, Title=Harry Potter and the Philosopher's Stone, Author=J.K. Rowling, Borrowed=false, ISBN=9780747532699, Publisher=Bloomsbury, Number of Copies=10], Book: Printed LibraryItem[ID=4, Title=Harry Potter and the Chamber of Secrets, Author=J.K. Rowling, Borrowed=false, ISBN=9780747538493, Publisher=Bloomsbury, Number of Copies=8]]
+
+
+Search by Author: [Book: Printed LibraryItem[ID=1, Title=Harry Potter and the Philosopher's Stone, Author=J.K. Rowling, Borrowed=false, ISBN=9780747532699, Publisher=Bloomsbury, Number of Copies=10], Book: Printed LibraryItem[ID=4, Title=Harry Potter and the Chamber of Secrets, Author=J.K. Rowling, Borrowed=false, ISBN=9780747538493, Publisher=Bloomsbury, Number of Copies=8], Periodical: PrintedLibraryItem[ID=6, Title=Nature, Author=J.K. Rowling, Borrowed=false, ISBN=0028-0836, Publisher=Nature Publishing Group, Number of Copies=12]]
+
+
+Search by ISBN: [Book: Printed LibraryItem[ID=1, Title=Harry Potter and the Philosopher's Stone, Author=J.K. Rowling, Borrowed=false, ISBN=9780747532699, Publisher=Bloomsbury, Number of Copies=10]]
+
+
+Search by Title (Periodical): [Periodical: PrintedLibraryItem[ID=6, Title=Nature, Author=J.K. Rowling, Borrowed=false, ISBN=0028-0836, Publisher=Nature Publishing Group, Number of Copies=12]]
 
 
 DATABASE:
 
-The database for this project looks like the following
+The database for this project looks like the following:
 
+LibraryItem
+ID (Primary Key) - Int
+Title - VARCHAR
+Author - VARCHAR
+isBorrowed - Boolean
+ISBN - String
+Publisher - VARCHAR
+NumCopies - int
 
+Book - extends LibraryItem
+type - VARCHAR
 
+Periodical - extends LibraryItem
+type - VARCHAR
+
+Patron
+Name - PK VARCHAR
+Address - VARCHAR
+PhoneNum - VARCHAR
+memType - VARCHAR
+BorrowList - ArrayList
+
+Author
+Name - PK VARCHAR
+DOB - VARCHAR
 
