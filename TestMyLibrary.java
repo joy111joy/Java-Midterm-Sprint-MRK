@@ -62,9 +62,6 @@ public class TestMyLibrary {
         System.out.println();
         System.out.println();
 
-        System.out.println("Search by ISBN: " + libraryManager.searchItemsByISBN("9780747532699"));
-        System.out.println();
-        System.out.println();
 
         System.out.println("Search by Title (Periodical): " + libraryManager.searchItemsByTitle("Nature"));
     }
